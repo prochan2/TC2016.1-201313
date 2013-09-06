@@ -77,7 +77,7 @@ void sortItems(int l, char** a) {
 int main(int argc, char** argv) {
     Item* list = readItems();
 
-    cout << "\nThe original array is:" << endl;
+    cout << "\nThe original list is:" << endl;
     printItems(list);
 
     // the sorting is not yet rewrote for the linked list!
