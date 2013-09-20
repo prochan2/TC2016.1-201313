@@ -104,6 +104,24 @@ void addAnimal(animal* newAnimal, animal*& firstAnimal) { // the firstAnimal has
 
 }
 
+// This function finds an animal in the list
+// and changes its number of legs
+void changeLegs(animal*first, int newLegs, string animalName) {
+	// To find the item in the list, we've got to go through the list
+	// and compare the given name with the name of each animal
+    animal*current = first;
+    while (current != 0) {
+        if (animalName == current->name) {
+			// If the names match, we have found the right animal,
+			// so we can do the change
+            current->legs = newLegs;
+			// That's all what we wated to do.
+            break;
+        }
+        current = current->next;
+    }
+}
+
 // This function prints out the whole list.
 void printAnimals(animal* first){
     animal* current = first;
